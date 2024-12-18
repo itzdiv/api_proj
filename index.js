@@ -6,7 +6,8 @@ const app = express();
 const PORT = 3000;
 
 // API Keys
-const OPEN_CAGE_API_KEY = "7c4edccbe3d24fce8ee189a6fff7147c";
+//Get Your Own API KEY from opecageapi !
+const OPEN_CAGE_API_KEY = "Your Own api key of opencage";
 
 // Middleware
 app.use(express.static("public"));

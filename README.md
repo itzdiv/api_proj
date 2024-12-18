@@ -39,8 +39,8 @@ Follow these steps to set up the project locally:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/City-Info-Finder.git
-cd City-Info-Finder
+git clone https://github.com/your_username/api_proj.git
+cd api_proj
 ```
 ### 2. Install Dependencies
 ```bash

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Info Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <h1>City Information Finder</h1>
+
+        <!-- Form Section -->
+        <form action="/get-info" method="POST" class="city-form">
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" placeholder="Enter country" required>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" placeholder="Enter state" required>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="Enter city" required>
+
+            <button type="submit" class="submit-btn">Get Information</button>
+        </form>
+
+        <!-- Results Section -->
+        <div class="results">
+            <% if (data) { %>
+                <h2>Results for <%= data.city %>, <%= data.state %>, <%= data.country %></h2>
+
+                <!-- AQI and Weather Information together -->
+                <div class="info-row">
+                    <div class="info-box">
+                        <h3>AQI of the City</h3>
+                        <p><%= data.aqi %></p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Weather Information</h3>
+                        <p>Temperature: <%= data.weather ? data.weather.temperature : 'N/A' %>°C</p>
+                        <p>High: <%= data.weather ? data.weather.high : 'N/A' %>°C</p>
+                        <p>Low: <%= data.weather ? data.weather.low : 'N/A' %>°C</p>
+                    </div>
+                </div>
+
+                <!-- Distance from Capital and Time Zone together -->
+                <div class="info-row">
+                    <div class="info-box">
+                        <h3>Sunrise and Sunset Times</h3>
+                        <p><%= data.sunriseSunset ? data.sunriseSunset : 'N/A' %></p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>Time Zone Info</h3>
+                        <p><%= data.timezone ? data.timezone : 'N/A' %></p> <!-- Display timezone -->
+                    </div>
+                </div>
+
+                <% if (data.places && data.places.length > 0) { %>
+                    <div class="places-section">
+                        <h3>Famous Places Nearby</h3>
+                        <div class="places-list">
+                            <% data.places.forEach(place => { %>
+                                <div class="place-card">
+                                    <h4><%= place.title %></h4>
+                                    <p>Distance: <%= place.distance %> meters</p>
+                                    <p>Coordinates: <%= place.lat %>, <%= place.lng %></p>
+                                </div>
+                            <% }); %>
+                        </div>
+                    </div>
+                <% } else { %>
+                    <div class="places-section">
+                        <h3>5. Famous Places Nearby</h3>
+                        <p>No places found nearby.</p>
+                    </div>
+                <% } %>
+                
+                  
+
+            <% } else { %>
+                <!-- Default Message -->
+                <p>Fill out the form above to get city information.</p>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

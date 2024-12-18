@@ -1,0 +1,164 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9faf4; /* WHITE SMOKE */
+    color: #4a6163; /* DEEP SPACE SPARKLE */
+    line-height: 1.6;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f17a7e; /* LIGHT CORAL */
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+label {
+    font-weight: bold;
+    color: #4a6163; /* DEEP SPACE SPARKLE */
+}
+
+input[type="text"] {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #f9a66c; /* SANDY BROWN */
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #ffc94b; /* PASTEL ORANGE */
+    box-shadow: 0 0 5px rgba(255, 201, 75, 0.6);
+}
+
+.submit-btn {
+    padding: 12px;
+    font-size: 1rem;
+    background: #ffc94b; /* PASTEL ORANGE */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background: #f17a7e; /* LIGHT CORAL */
+    transform: scale(1.05);
+}
+
+/* Results Section */
+.results {
+    margin-top: 20px;
+    display: block;
+}
+
+/* Info Boxes (Grouped) */
+.info-row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.info-box {
+    background: #f9faf4; /* WHITE SMOKE */
+    border: 2px solid #4a6163; /* DEEP SPACE SPARKLE */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 48%; /* Make the boxes take up half the width */
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.info-box h3 {
+    font-size: 1.2rem;
+    color: #f9a66c; /* SANDY BROWN */
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    font-size: 1rem;
+    color: #4a6163; /* DEEP SPACE SPARKLE */
+}
+
+.info-box:hover {
+    border-color: #ffc94b; /* PASTEL ORANGE */
+    box-shadow: 0 8px 16px rgba(255, 201, 75, 0.4);
+    transform: scale(1.05);
+}
+
+/* Famous Places Section (takes full width) */
+.places-section {
+    margin-top: 30px;
+    background: #fff;
+    border: 2px solid #f17a7e; /* LIGHT CORAL */
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.places-section h3 {
+    font-size: 1.5rem;
+    color: #f17a7e; /* LIGHT CORAL */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.places-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.place-card {
+    background: #f9faf4; /* WHITE SMOKE */
+    border: 2px solid #4a6163; /* DEEP SPACE SPARKLE */
+    border-radius: 8px;
+    padding: 15px;
+    flex: 1 1 calc(50% - 30px); /* Ensures 2 items per row, considering the gap */
+    max-width: calc(50% - 30px); /* To maintain consistent sizing */
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.place-card:hover {
+    border-color: #ffc94b; /* PASTEL ORANGE */
+    transform: scale(1.1);
+}
+
+.place-card p {
+    color: #4a6163;
+    font-weight: bold;
+    font-size: 1rem;
+}

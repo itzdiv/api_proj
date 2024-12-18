@@ -65,7 +65,7 @@ node index.js
     - Sunrise and sunset times
     - Famous places nearby.
 
-##Screenshots 📸
+## Screenshots 📸
 
 - Homepage:
  ![Homepage](render/img1.png)
